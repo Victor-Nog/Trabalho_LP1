@@ -1,0 +1,5 @@
+Nome:  victor,    Pontos: 400
+Nome:  1,    Pontos: 200
+Nome:  1,    Pontos: 0
+Nome:  victor,    Pontos: 400
+Nome:  jao,   Pontos: 200
