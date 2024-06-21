@@ -344,16 +344,15 @@ int ContarLinhas(const char *caminhoArquivo) {
     return linhas;
 }
 
-char** LerLinhas(const char *caminhoArquivo) {
+void LerLinhas(const char *caminhoArquivo) {
     numeroDeLinhas = ContarLinhas(caminhoArquivo);
     if (numeroDeLinhas <= 0) {
-        return NULL;
+        printf("Arquivo vazio.\n");
     }
 
     FILE *arquivo = fopen(caminhoArquivo, "r");
     if (!arquivo) {
-        printf("Erro ao abrir o arquivo");
-        return NULL;
+        printf("Erro ao abrir o arquivo.\n");
     }
 
     strings = (char**)malloc(numeroDeLinhas * sizeof(char*));
@@ -369,7 +368,6 @@ char** LerLinhas(const char *caminhoArquivo) {
         }
     }
     fclose(arquivo);
-    return strings;
 }
 
 
